@@ -22,7 +22,7 @@ jobs:
       run: npm install
 
     - name: Run ESLint security rules
-      run: 
+      run: |
         npx eslint . -f json -o eslint-report.json || true
 
     - name: Upload ESLint report
