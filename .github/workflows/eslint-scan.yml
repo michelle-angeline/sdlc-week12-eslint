@@ -23,6 +23,7 @@ jobs:
 
     - name: Run ESLint security rules
       run: |
+        chmod +x node_modules/.bin/eslint
         npx eslint . -f json -o eslint-report.json || true
 
     - name: Upload ESLint report
